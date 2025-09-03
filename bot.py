@@ -1,10 +1,11 @@
+import os
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.utils import executor
 
 # === НАСТРОЙКИ ===
-TOKEN = "8262532885:AAGCSJGKQ0GlEn71j77bMw-3GEIUk6DPgc0"
-ADMIN_ID = 683086719  # твой Telegram ID
+TOKEN = os.getenv("BOT_TOKEN")   # бот возьмёт токен из переменных окружения
+ADMIN_ID = int(os.getenv("ADMIN_ID"))  # и айди тоже из переменных окружения
 REF_LINK = "https://www.bitrue.com/referral/landing?cn=600000&inviteCode=TZLLALV"  # твоя реферальная ссылка
 COPYTRADING_LINK = "https://www.bitrue.com/copy-trading/trader/2833136590890188833"  # ссылка на копитрейдинг
 
